@@ -1,26 +1,22 @@
 from flask import Flask, request, jsonify
-from recommendation_logic import swipe_restaurant, get_recommendations_for_couple
+from recommendation_logic import RecommendationLogic
 
 app = Flask(__name__)
+recommendation_logic = RecommendationLogic()
 
 @app.route('/swipe', methods=['POST'])
 def swipe():
-    """Handles swipe actions for each user on a specific restaurant."""
-    data = request.json
-    user = data.get("user")
-    restaurant_name = data.get("restaurant_name")
-    action = data.get("action")
-    
-    if user and restaurant_name and action in ("r", "l"):
-        result = swipe_restaurant(user, restaurant_name, action)
-        return jsonify({"status": "success", "result": result})
-    else:
-        return jsonify({"status": "error", "message": "Invalid input"}), 400
+    data = request.get_json()
+    user = data.get('user')
+    restaurant_name = data.get('restaurant_name')
+    action = data.get('action')
+
+    result = recommendation_logic.handle_swipe(user, restaurant_name, action)
+    return jsonify({"status": "success", "result": result})
 
 @app.route('/recommend', methods=['GET'])
 def recommend():
-    """Provides restaurant recommendations based on swipes from both users."""
-    recommendations = get_recommendations_for_couple()
+    recommendations = recommendation_logic.get_recommendations()
     return jsonify({"recommendations": recommendations})
 
 if __name__ == '__main__':
