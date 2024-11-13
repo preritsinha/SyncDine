@@ -22,7 +22,7 @@ DineSync is a fun and interactive app for couples to discover the perfect restau
 
 ## Setup
 
-To run this project locally, follow these steps:
+To run this project locally, follow these steps: (FOR NOW LOCAL SUPPORT HAS ONLY BEEN TESTED, WILL BE ADDING UI AND FE LATER)
 
 ### 1. Clone the Repository
 
