@@ -5,7 +5,7 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            Text("Welcome to DineMatch!")
+            Text("Welcome to SyncAndDine!")
                 .font(.title)
                 .padding()
 
