@@ -1,7 +1,7 @@
 
-# DineSync
+# DineMatch
 
-DineSync is a fun and interactive app for couples to discover the perfect restaurant together. Inspired by the swiping feature from dating apps, DineSync allows users to swipe through restaurant options, like or dislike them, and find their ideal dining experience based on mutual preferences.
+DineMatch is a fun and interactive app for friends and couples to discover the perfect restaurant together. Inspired by the swiping feature from dating apps, DineMatch allows users to swipe through restaurant options, like or dislike them, and find their ideal dining experience based on mutual preferences.
 
 ## Features
 
@@ -27,8 +27,8 @@ To run this project locally, follow these steps: (FOR NOW LOCAL SUPPORT HAS ONLY
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/dinesync.git
-cd dinesync
+git clone https://github.com/your-username/DineMatch.git
+cd DineMatch
 ```
 
 ### 2. Install Dependencies
